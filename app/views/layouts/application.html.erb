@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  
+  <title>Banana-tree</title>
+  
+
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+ 
+  <link rel="stylesheet" type='text/css' href="/assets/style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+  
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <header class='header-bar'>
+    <div class='navbar_sh'>
+        <ul class='ul_sh'>
+            <li class='li_sh'><a href='#' class='sh'><b>About Us</b></a></li>
+            <li class='li_sh'><a href='/home/product' class='sh'><b>Products</b></a></li>
+            <li class='li_sh'><a href='/home/main' class='sh'><img src='/assets/lsh/logo.PNG'></a></li>
+            <li class='li_sh'><a href='/home/js_magazine' class='sh'><b>Magazine</b></a></li>
+            <li class='li_sh dropdown'>
+              <a href='#' class='sh dropdown-toggle' data-toggle='dropdown'><b>Board</b></a>
+              <ul class='dropdown-menu' style='opacity:0;'>
+                <li><a href='/notice'>NOTICE</a></li>
+                <li><a href='/faq'>FAQ</a></li>
+                <li><a href='#'>EVENT</a></li>
+                <li><a href='#'>기모찌</a></li>
+                <li><a href='#'>기모찌2</a></li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+  </header>
+
+
+  
+  
+  
+  <% if flash[:notice] %>
+  <%= flash[:notice] %>
+  <% end %>
+
+<%= yield %>
+
+
+<div class='wrapper footer' style='margin-top:4%; position:relative;'>
+    <footer class='smblock'>
+        <div class='container'>
+            <div class='text-vertical-box col-xs-12 col-sm-3'>
+                <div id='footer-logo' class='text-vertical-center text-center' style='height:174px;'>
+                    <h2>
+                        <strong>BANANA TREE</strong>
+                        <br>
+                        <small>FOR EVERYONE</small>
+                    </h2>
+                </div>
+            </div>
+            <div id='footer-content' class='col-xs-12 col-sm-9'>
+                <ul class='list-inline foot_nav'>
+                    <li class='nowrap'>
+                        <a href='#' style='color:white; font-size:20px'>About Us</a>
+                    </li>
+                    <li>|</li>
+                    <li class='nowrap'>
+                        <a href='#' style='color:white; font-size:20px'>Terms of Us</a>
+                    </li>
+                    <li>|</li>
+                    <li class='nowrap'>
+                        <a href='#' style='color:white; font-size:20px'>Privacy Policy</a>
+                    </li>
+                    <li>|</li>
+                    <li class='nowrap'>
+                        <p style='color:white; font-size:15px'>Contact Us</p>
+                    </li>
+                    <li class='nowrap'>
+                        <p style='color:gray; font-size:15px'>abcde@bananatree.com</p>
+                    </li>
+                    <li class='nowrap'>
+                        <p style='color:gray; font-size:15px'>010-xxxx-xxxx</p>
+                    </li>
+                </ul>
+                <p style='font-size:20px'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at euismod massa. Fusce sit amet molestie tellus.</p>
+                <hr>
+                <ul class='list-inline foot_nav'>
+                    <li><p style='font-size:20px'>Service</p></li>
+                    <li><p style='color:gray'>BANANA TREE</P></li>
+                    <li><p style='font-size:20px'>Adress</p></li>
+                    <li><p style='color:gray'>서울특별시 종로구 성균관로 25-2 성균관대학교 멋쟁이사자처럼 3팀</p></li>
+                    <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+                </ul>    
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+
+<script>
+
+/* 자바스크립트 영역 */
+
+</script>
+</html>

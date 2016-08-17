@@ -1,0 +1,22 @@
+<head>
+    <link rel="stylesheet" type='text/css' href="/assets/style.css"/>
+</head>
+
+<div class="container">
+    <form action="/notice_input_sent" method="post" style="margin-top: 50px;" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="jf_notice_title">제목</label>
+        <input name="jf_notice_title" type="text" class="form-control" id="jf_notice_title" placeholder="제목을 입력해 주세요.">
+      </div>
+      
+      <label for="jf_notice_content">내용</label>
+      <textarea name="jf_notice_content" class="form-control" id="jf_notice_content" rows="20" placeholder="내용을 입력해 주세요."></textarea>
+      
+      <div class="form-group">
+        <label for="jf_notice_file">파일 첨부</label>
+        <input name="jf_notice_file" type="file" id="jf_notice_file">
+        <p class="help-block">파일을 첨부하여 주세요</p>
+      </div>
+      <button type="submit" class="btn btn-default">제출</button>
+    </form>
+</div>

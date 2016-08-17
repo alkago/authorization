@@ -1,0 +1,37 @@
+<div class='container'>
+
+    <ul class="nav navbar-nav navbar-right">
+        <%if user_signed_in? %>
+            <li><a href="/">Home</a></li>
+            <li><a href="/system/mypage">My page</a></li>
+            <li><a href="/users/sign_out" data-method="delete">Log out</a></li>
+        <%else%>
+            <li><a href="/">Home</a></li>
+            <li><a href="/users/sign_in">Log in</a></li>				                                                                  
+            <li><a href="/users/sign_up">Sign up</a></li>
+        <%end%>
+    </ul>
+    
+    <div class="header">
+        <div class='col-md-12' style='text-align:center; padding:10px; background-color:#FF0066; margin-top:10px'>
+            <a href='#' style='color:#17202A'><b>우리의 사이트 제목!!</b></a>
+        </div>
+    </div>
+        
+        <br><br>
+        
+        <ul>
+            <li><a href = "/home/qna_jh">"1:1 상담하기"로 이동하기</a></li>
+            <li><a href = "/faq">FAQ 페이지</a></li>
+            <li><a href = "/notice">공지사항</a></li>
+        </ul>
+</div>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,108 @@
+.bestseller_sh{
+    border-style:ridge;
+    border-color:black;
+    cursor:pointer;
+}
+.ptext_sh{
+    font-family:"Courier New", Courier, monospace;
+    font-size:20px;
+    font-weight:bold;
+    color:#283593;
+}
+
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a.sh{
+    color:black;
+    
+}
+a.sh:hover{
+    color:gray;
+    text-decoration:none;
+    /*font-size:150%;*/
+}
+
+.main_sh{
+    border-radius:50%;
+    
+}
+.main_text_sh{
+    text-align:center;
+    margin-top:2%;
+    padding-left:15px !important;
+    padding-right:25px !important;
+}
+.grayscale{
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+.sepia {-webkit-filter: sepia(100%);filter: sepia(100%);}
+
+
+.imgWrap {
+  position: relative;
+}
+
+.imgDescription {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #CCD1D1;
+  color: black;
+  font-weight:bold;
+  font-size:20px;
+  height:100%;
+
+
+  visibility: hidden;
+  opacity: 0;
+
+  /*remove comment if you want a gradual transition between states
+  -webkit-transition: visibility opacity 0.2s;
+  */
+}
+
+
+.imgWrap:hover .imgDescription {
+  visibility: visible;
+  opacity: 0.6;
+}

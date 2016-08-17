@@ -1,0 +1,68 @@
+<!-- To do list
+
+1. 파일 - DB 연동 :: unless ~~ .empty? 문제 해결해야 함.
+
+2. Nav bar -> 그리드 등과 함께! => 그냥 적용하면 될 듯.
+
+3. 글 목록 template 선택 / 연동 및 작성-->
+
+<br>
+
+<div class="container">
+
+    <!-- Indicates a successful or positive action -->
+    <button type="button" class="btn btn-success"><a href = "/notice_input" style="color:white;">공지사항 작성하기</a></button>
+    
+    <button type="button" class="btn btn-warning"><a href = "/" style="color:white;">홈으로 돌아가기</a></button>
+    <hr>
+    
+    <% @jf_notice_view.each do |j| %>
+    
+    <p>제목 : <%= j.title %></p>
+    
+    <p>내용 : <%= j.content %></p>
+    
+    
+
+    <p> <img src="<%= j.image_url %>"> </p>
+
+   
+    <!--    
+    
+    얘 갑자기 죽은 이유는? empty? 함수 어디로 갔지?
+    답 : 수정시에 image url 사라지면 url이 사라지는듯.. unless 없다면? 인 경우에는 어떻게 해야 할 지 적어주어야 하는 건가?
+    근데, 이미지 없을 때 얘를 살리려면 어떻게 해야 하는 것일까? 그게 없네. [unless ~~ .empty?]는 아닌가봐.
+    이걸 어떻게 해결해야하지?
+    
+    -->
+    
+    
+    
+    <p><%= j.created_at.in_time_zone("Asia/Seoul").strftime("%Y년%m월%d일 %H시%M분%S초") %></p>
+    
+    
+    <a href="/notice_update_view/<%=j.id%>">[수정]</a>
+    <a href="/notice_destroy/<%=j.id%>">[삭제]</a>
+    
+    <br>
+    <br>
+    
+    <% j.notice_comments.each do |c| %>
+
+    <p><Strong><%= c.content %></Strong></p>
+    
+    <% end %>
+    
+    <br>
+    <br>
+    
+    <form action="/notice_comment" method="post">
+    <input name="notice_id_comment" value="<%= j.id %>" type="hidden">
+    <textarea name="jf_notice_comment" class="form-control well" id="jf_notice_comment" rows="1" placeholder="댓글을 입력해 주세요."></textarea>
+    <button type="submit" class="btn btn-default">댓글 쓰기</button>
+    </form>
+    
+    <hr>
+    
+    <% end %>
+</div>
