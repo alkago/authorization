@@ -1,17 +1,91 @@
-<div class="conatiner" style="text-align: center;">
+<link rel="stylesheet" type='text/css' href="/assets/borad_msg.css"/>
+
+<div class="container">
+
+    <!--content-->
     
-    <br>
-    
-    <h1>제목 :  <%= @existing_notice.title %> </h>
-    
-    <br>
-    
-    <p>내용 :  <%= @existing_notice.content %> </p>
-    
-    <br>
-    
-    <p> <img src="<%= @existing_notice.image_url %>"> </p>
+    <div class="sign_wrap">
+        <h2 class="head_title" style="float: left;">Notice</h2>
+    </div>    
 
     <br>
+    <br>
+    <br>
 
+    
+    
+    <div class="content-well container">  
+        <span class="title-text">제목</span>
+            <div><%= @existing_notice.title %></div>   
+            
+    <hr>
+
+        <span class="title-text">내용</span>    
+            <div><%=@existing_notice.content.gsub(/(?:\n\r?|\r\n?)/, '<br>').html_safe %></div>
+    </div> 
+
+
+
+        <br>
+        
+        <p> <img src="<%= @existing_notice.image_url %>"> </p>
+
+
+    <!--수정/삭제 권한 주기-->
+        <% if current_user.nil? %>    
+            <div></div>        
+        <% elsif user_signed_in? %>
+    
+        <% else current_user.has_role? "admin" %>
+            <form class="form-inline" style ="float: right;">
+            <div style="float: right;">
+                <a href="/notice_update_view/<%= @existing_notice.id %>">
+                      <button type="button" class="btn btn-default btn-xs">수정</button>
+                </a>
+                <a href="/notice_destroy/<%= @existing_notice.id %>">
+                  <button type="button" class="btn btn-default btn-xs hover delete">삭제</button>
+                </a>
+            </div>
+            </form>
+        <% end %>        
+    
+    <br>
+    <hr>
+
+        
+        <!--댓글-->
+        <% @existing_notice.notice_comments.each do |c| %>
+    
+        <p><%=simple_format h c.content %></p>
+        
+        <% end %>
+        
+    
+    <!--comment-->
+    
+        <span class="title-text comment">댓글달기</span>        
+        <form action="/notice_comment" method="post">
+            <input name="notice_id_comment" value="<%= @existing_notice.id %>" type="hidden">
+            <textarea name="jf_notice_comment" class="form-control content-well sm" 
+                      id="jf_notice_comment" rows="2" placeholder="댓글을 입력해 주세요." >
+            </textarea>
+            
+          
+            <button type="submit" class="btn btn-sm btn-submit" style="float: right;" >댓글 쓰기</button>
+        </form>
+
+        <a href="/home/jf_notice">목록</a>
+        
+    </br></br>
+    
+    
+
+    <hr>
+    
+
+    <br>
+    <br>
+
+    
+    
 </div>

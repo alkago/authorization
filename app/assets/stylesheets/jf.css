@@ -1,5 +1,6 @@
 /* jf_faq */
 
+/*
 html, body {
   height: 100%;
   margin: 0;
@@ -8,6 +9,8 @@ html, body {
   font: 16px 'Roboto';
   color: #7A7572;
 }
+*/
+
 
 .jf_notice_h1 {
   text-align: center;
@@ -51,10 +54,11 @@ html, body {
   font-weight: bold;
 }
 
+/* 이 친구들이 + 모양 결정하는 친구들 */
 .jf_notice_title:after, .jf_notice_title:before {
   content: '';
   position: absolute;
-  right: 1.25em;
+  right: 1.27em;
   top: 1.25em;
   width: 2px;
   height: 0.75em;
@@ -92,4 +96,79 @@ html, body {
 }
 
 /* jf_faq end */
+
+
+/* jf_paginate */
+
+
+/* jf_paginate end */
+
+
+
+/*added jh*/
+
+.search-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /*margin: 9px;*/
+    margin-right: 20px;
+    margin-top: 18px;
+    margin-left: 143px;
+	  width: 20px;
+  	height: 18px;
+    background: url(https://img.reebonzkorea.co.kr/assets/1410_renew/ic_search-6febb8b27ced6034aff3ebb63f2f66b5.png) no-repeat 0 0;
+    cursor: pointer;    
+}
+
+.btn-submit {
+	width: 70px;
+	height: 30px;
+	border-radius: 50px;
+	border: solid 1px #5eceaf;    
+	background-color: #fff;
+    
+}
+
+.head_title {
+	width: 106px;
+	height: 52px;
+	/*font-family: SourceSansPro;*/
+	font-size: 36px;
+	font-weight: 600;
+	letter-spacing: -1.8px;
+	text-align: right;
+  color: black;
+}
+
+.table-text{
+	width: 47px;
+	height: 20px;
+	/*font-family: NanumSquareOTFB;*/
+	font-size: 15px;
+	letter-spacing: -0.8px;
+	text-align: right;
+	color: #00bfd1;  
+}
+
+
+.btn-submit {
+	width: 80px;
+	height: 36px;
+	border-radius: 50px;
+	border: solid 1px #5eceaf;    
+	background-color: #fff;
+    
+}
+
+.btn-submit:hover{
+    color: #13676f;  
+	width: 80px;
+	height: 36px;
+	border-radius: 50px;
+	border: solid 1px #5eceaf;    
+	background-color: #fff;
+
+}
+
 

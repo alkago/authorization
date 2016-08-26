@@ -1,0 +1,143 @@
+<!-- To do
+
+1. 페이지 넘버 넘기기
+
+2. cancancan / rotify / devise 젬 논의 시작 -> ㅇ
+
+3. 업데이트 - 사진 업데이트 +) 사진 if -> 메인페이지. 왜 .image_url 이 먹히지 않는가?
+
+4. 
+
+-->
+
+<link rel="stylesheet" type='text/css' href="/assets/jf.css"/>
+
+
+
+<div class = container>
+    <div class="sign_wrap">
+            
+            <h2 class="top_left head_title" style="float: left;">Notice</h2>
+                <!--<form method="get" action="#" class="nav_search_wrap" style="margin-right: 5px; float: right;"> -->
+                <!--      <input type="hidden" value="커뮤니티 베스트" name="category">-->
+                <!--      <input type="text" class="nav_search_input" name="news_search" placeholder="제목 + 내용으로 검색" style="line-height:15px">-->
+                <!--      <button type="submit" class="nav_search_icon" style="height:32px">검색</button>-->
+                <!--</form>-->
+    </div>
+            
+
+    <!--jh가 만든 Search Box-->
+     <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" class="search-field" placeholder="   검색하기">
+          <div class="search-box"> </div>
+        </div>
+      </form>     
+
+
+
+
+    <div class="bs-example">
+        <!--검색결과-->
+        <table class="table table-hover table_talking">
+
+            <thead>
+                <tr class="table-text">
+                    <th id="td_1">번호</th>
+                    <th id="td_2">분류</th>
+                    <th id="td_3">제목</th>
+                    <th id="td_4">작성자</th>
+                    <th id="td_5">조회수</th>
+                    <th id="td_5">작성일</th>
+                </tr>
+            </thead>
+            
+        <tbody>
+
+
+            <% @jf_notice_view.each do |j| %>
+            
+                  <tr onclick="location.href='/notice/<%= j.id %>'" style="cursor: pointer">
+                    <td class="shorten" id="td_1"> <div><%= j.id %></div> </td>
+                    <td class="shorten" id="td_2"> 공지사항</td>
+                    <td class="shorten_left" id="td_3">   
+                        
+                        <div class="shorten_ie"> <span style="color:#ca2128;"> <!-- 제목 --> </span> <%= j.title %>
+                        
+                        
+                        <% if j.content.include?('a') %>
+                            <img src="/assets/j_fwan/post.jpg" style="height:20px"> </div>
+                        <% else %>
+                        </div>
+                            <% end %>
+                        <div class="imgline"><span style="font-size: 13px; color:#FE6700;"></span></div>
+                        
+                        <!-- 이거 어떻게 해야 이미지를 다른 곳에서 불러올까?-->
+                        
+                    </td> 
+                    
+                    <td class="shorten" id="td_4">아이디 </td>
+                    
+                    <td class="date" id="td_5">조회수</td>
+                    
+                    <td class="upload_date" id="td_6">작성일</span></td>
+                    
+                </tr>    
+            <% end %>        
+
+        </tbody>
+        </table>
+
+            
+        <!--admin에게만 공지사항 작성 권한주기 [ ctrl + / ]하면 주석 다 지워짐-->
+        <% if current_user.nil? %>    
+            <div></div>        
+        <% elsif user_signed_in? %>
+    
+            <button type="button" class="btn btn-submit" style="float: right;">
+                    <a href = "/notice_input">글쓰기</a>
+            </button>
+            
+        <% else current_user.has_role? "admin" %>
+        
+        <% end %>    
+
+
+
+    </div>
+
+        <!--page number-->
+        <center><%= will_paginate @jf_notice_view, renderer: BootstrapPagination::Rails, 
+                previous_label: "<", next_label: ">", inner_window: 1, outer_window: 0 %>
+        </center>
+    
+<br>
+<br>
+<br>
+
+
+
+                    
+            
+            <!--페이지 네이트
+            <div class="aca_news_paginate paginate_center" style ="float: center;">
+                <ul class="pagination pagination"><li class="prev disabled"><span>&lt;</span>
+                    </li> <li class="active"><span>1</span></li> 
+                    <li><a rel="next" href="/community/all?category=%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0+%EB%B2%A0%EC%8A%A4%ED%8A%B8&amp;page=2">2</a></li> 
+                    <li class="next"><a rel="next" href="/community/all?category=%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0+%EB%B2%A0%EC%8A%A4%ED%8A%B8&amp;page=2">&gt;</a></li>
+                </ul>
+            </div>
+            -->
+                    
+                    <!--<button type="button" class="btn btn-default btn-sm">                      -->
+                    <!--    <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>-->
+                    <!--</button>-->
+                    <!--<button type = "button" class " btn-jh"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></button>-->
+                    <!--<button type="button" class="btn btn-default btn-sm">                      -->
+                    <!--    <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>                    -->
+                    <!--</button>-->
+                    
+ 
+
+    </div>
+</div>

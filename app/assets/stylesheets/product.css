@@ -1,0 +1,254 @@
+.col-md-9{
+  width:80% !important;
+}
+.col-md-offset-2{
+  margin-left:13%;
+}
+
+.affix{
+  margin-left:-3rem;
+  top:34rem;
+
+}
+
+
+.sidefilterbar{
+    width:24rem;
+    height:40rem;
+}
+
+.sidebar_title{
+  font-family: SourceSansPro;
+  font-size: 18px;
+  font-weight: 600;
+  color: #5eceaf;
+  padding-bottom:1rem;
+}
+.sidebar_title2{
+  font-family: SourceSansPro;
+  font-size: 16px;
+  font-weight: 600;
+  color: #171717;
+  padding-bottom:1rem;
+}
+
+.sidebar_text{
+  font-family: NanumSquareOTFR;
+  font-size: 13px;
+  color: #171717;
+  padding-bottom:0.5rem;
+}
+
+.hrbar{
+  color: #00bfd1;
+  background-color: #00bfd1;
+  height: 2px;
+}
+
+.filter_ul{
+  display:inline-block;
+  list-style:none;
+  margin:0;
+  padding:0px;
+  overflow:hidden;
+  
+}
+
+.filter_content{
+  width:110px;
+  height:50px;
+  display:inline-block;
+  padding: 10px 10px;
+  font-family: NanumSquareOTFR;
+  font-size: 17px;
+  color: #000000;
+  text-align: center;
+}
+
+.filter_title{
+  width:80px;
+  height:50px;
+  padding-top:10px;
+  padding-bottom:10px;
+  padding-right:20px;
+  display:inline-block;
+  font-family: NanumSquareOTFB;
+  font-size: 19px;
+  color: #000000;
+  font-weight:bold;
+  text-align: left;
+}
+
+
+/*added JH*/
+
+.btn-filter-search {
+	width: 96px;
+	height: 32.9px;
+	background-color:white;
+	color: #00bfd1;
+	border-radius: 50px;
+	border: solid 2px #00bfd1;
+	margin-top:2rem;
+}
+
+.btn-filter-search:hover {
+    color: #13676f; 
+}
+
+
+/*added JH*/
+
+
+/*product CSS*/
+
+.special_box{
+  margin-top:5rem; 
+  padding:10px; 
+  padding-right:4px !important;
+  padding-bottom:17px !important;
+  border: solid 4px #5eceaf;
+}
+
+
+.button3{
+  width:178px;
+  height:61px;
+  border-radius:50px;
+  font-size:32px;
+  letter-spacing: -1.4px;
+  background-color:#5eceaf;
+  color:white;
+  text-decoration:none;
+  border:none;
+  padding:1rem;
+}
+
+.main_img {
+  position:relative;
+  z-index:-1;
+}
+
+.main_text{
+  top:137px;
+  left:46px;
+  right:46px;
+  font-family: AppleSDGothicNeo;
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 1.56;
+  letter-spacing: -1.5px;
+  text-align: center;
+  color: #0c0c0c;
+  position:absolute;
+}
+
+.main_text2{
+  top:137px;
+  left:100px;
+  right:100px;
+  font-family: AppleSDGothicNeo;
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 1.56;
+  letter-spacing: -1.5px;
+  text-align: center;
+  color: #0c0c0c;
+  position:absolute;
+}
+.main_text3{
+  top:137px;
+  left:60px;
+  right:60px;
+  font-family: AppleSDGothicNeo;
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 1.56;
+  letter-spacing: -1.5px;
+  text-align: center;
+  color: #0c0c0c;
+  position:absolute;
+}
+.p_content{
+  width:180px;
+  padding-left:25px;
+  text-align:left;
+}
+
+.main_p_img{
+  margin-top:40px;
+}
+
+.main_p_title{
+  margin-top:10px;
+  font-family: SF NS Text;
+  font-size: 18px;
+  color: #373738;
+  margin:0 0 5px;
+}
+
+.main_p_subtitle{
+  font-size: 14px;
+  margin:0 0 5px;
+}
+
+.p_name{
+  font-size: 23px;
+  font-weight:bold;
+  color: #000000;
+}
+
+.p_price{
+  font-family: Roboto;
+  font-size: 28px;
+  font-weight: bold;
+  color: #00bfd1;
+}
+
+.bestseller_sh{
+    border-radius: 15px;
+    background-color: #ffffff;
+    border: solid 2px #00bfd1;
+    cursor:pointer;
+    width:21%;
+    height:517px;
+    float:left;
+    margin-right: 5%;
+}
+.bestseller_sh2{
+    border-radius: 15px;
+    background-color: #ffffff;
+    border: solid 2px #00bfd1;
+    cursor:pointer;
+    width:21%;
+    float:left;
+    height:517px;
+}
+
+.ptext_sh{
+    font-family:"Courier New", Courier, monospace;
+    font-size:20px;
+    font-weight:bold;
+    color:#283593;
+}
+.p_add{
+  left:14rem;
+  position:relative;
+}
+
+
+
+.show_fiter {
+  font-family: NanumSquareOTFR;
+  font-size: 16px;
+  letter-spacing: -0.7px;
+  color: #000000;
+  float:left;
+  padding-right:30px;
+  text-align:right
+}
+
+.p_style{
+  margin-bottom:4rem;
+}
+/*product CSS*/

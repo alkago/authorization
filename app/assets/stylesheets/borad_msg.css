@@ -1,0 +1,68 @@
+.content-well {
+	width: 90%;
+    text-align: left;	
+	/*height: 154px;*/
+	border-radius: 3px;
+	border: solid 2px #5eceaf;
+    padding: 1% 2% 1% 2%;
+    margin-top: 1%;
+}
+
+.content-well sm{
+	width: 90%;
+    text-align: left;	
+	border-radius: 3px;
+	border: 2px #5eceaf;
+    /*padding: 1% 2% 1% 2%;*/
+    /*margin-top: 1%;*/
+}
+
+.title-text {
+	width: 37px;
+	height: 25px;
+	/*font-family: AppleSDGothicNeo;*/
+	font-size: 18px;
+	font-weight: bold;
+	color: #00bfd1;  
+}
+
+.btn-submit {
+	width: 80px;
+	height: 36px;
+	border-radius: 50px;
+	border: solid 1px #5eceaf;    
+	background-color: #fff;
+    
+}
+
+.btn-submit:hover{
+    color: #13676f;  
+	width: 80px;
+	height: 36px;
+	border-radius: 50px;
+	border: solid 1px #5eceaf;    
+	background-color: #fff;
+
+}
+
+.title-text comment {
+	width: 37px;
+	height: 25px;
+	/*font-family: AppleSDGothicNeo;*/
+	font-size: 14px;
+	color: #00bfd1;
+    text-align: left;		
+	
+}
+
+.head_title {
+	width: 106px;
+	height: 52px;
+	/*font-family: SourceSansPro;*/
+	font-size: 38px;
+	font-weight: 600;
+	letter-spacing: -1.8px;
+	text-align: right;
+	color: #00bfd1;
+	padding-bottom: 10px;
+}

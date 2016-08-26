@@ -2,11 +2,20 @@ class HomeController < ApplicationController
   def index
     
   end
+  
+
+  
+  
   def js_magazine
   end
+  
   def js_magazine_v
   end
+  
   def js_magazine_p
+  end
+  
+  def js_tester
   end
   
   def jf_faq
@@ -19,13 +28,16 @@ class HomeController < ApplicationController
   
   def jf_notice
   
-    @jf_notice_view = Notice.all.reverse
-  
+    @jf_notice_view = Notice.paginate(:page => params[:page], :per_page => 13).order('id DESC')
+    # or, use an explicit "per page" limit:
+
   end
   
   def jf_notice_content
-    @jf_notice_view = Notice.all.reverse
+    
     @existing_notice = Notice.find(params[:notice_id])
+    @jf_notice_view = Notice.all.reverse
+    
   end
 
   def jf_notice_input
@@ -35,7 +47,7 @@ class HomeController < ApplicationController
     jf_notice_write = Notice.new
     jf_notice_write.title = params[:jf_notice_title]
     jf_notice_write.content = params[:jf_notice_content]
-   
+    jf_notice_write.user = current_user
     # 사진은 따로 .file 받지는 않는듯.
     uploader = JfNoticeImageUploader.new 
     uploader.store!(params[:jf_notice_file])
@@ -52,11 +64,12 @@ class HomeController < ApplicationController
     comment = NoticeComment.new
     comment.notice_id = params[:notice_id_comment]
     comment.content = params[:jf_notice_comment]
+    comment.user = current_user
     comment.save
-    #이런 ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ 모델에는 _가 들어가면 안됨. _를 넣어서 했다면 _ 이후 첫 알파벳 대문자 & _는 생략
+    #이런 ㅋㅋㅋㅋㅋㅋㅋㅋ 모델에는 _가 들어가면 안됨. _를 넣어서 했다면 _ 이후 첫 알파벳 대문자 & _는 생략
     
 
-    redirect_to '/notice'
+    redirect_to :back
   end
   
   def jf_notice_update_view
@@ -78,12 +91,16 @@ class HomeController < ApplicationController
     
     flash[:notice] ="수정되었습니다."
     
-    redirect_to '/notice'
+    redirect_to '/notice/' + @existing_notice.id.to_s
   end
 
   def jf_notice_destroy
     @existing_notice = Notice.find(params[:notice_id])
     @existing_notice.destroy
-    redirect_to '/notice'
+    redirect_to '/notice' 
+  end
+  
+  def jf_event
+  
   end
 end

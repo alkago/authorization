@@ -10,13 +10,31 @@
       </div>
       
       <label for="jf_notice_content">내용</label>
-      <textarea name="jf_notice_content" class="form-control" id="jf_notice_content" rows="20" placeholder="내용을 입력해 주세요."></textarea>
+      <textarea name="jf_notice_content" class="form-control" id="jf_notice_content" rows="20" placeholder="내용을 입력해 주세요.">
+        
+        
+        <!-- 이미지 놀이 내용에 이미지 유무를 표시?해서 가져오기?-->
+        <!--
+        <% if %>
+        <span value="이미지첨부" type="hidden">이미지첨부</span>
+        <% else %>
+        <span value="" type="hidden"></span>
+        <% end %>
+        -->
+        <!-- 이미지 놀이-->
+        
+        </textarea>
       
       <div class="form-group">
         <label for="jf_notice_file">파일 첨부</label>
         <input name="jf_notice_file" type="file" id="jf_notice_file">
         <p class="help-block">파일을 첨부하여 주세요</p>
       </div>
-      <button type="submit" class="btn btn-default">제출</button>
+      
+      <br>
+      <button type="submit" class="btn btn-submit">제출</button>
     </form>
+    <br>
 </div>
+
+

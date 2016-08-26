@@ -1,11 +1,24 @@
 source 'https://rubygems.org'
 
+# 페이지 지정 해주기
+gem 'will_paginate', '~> 3.1.0'
+gem 'will_paginate-bootstrap'
+
+# 이미지 파일 올리기
 gem 'carrierwave'
 gem 'fog-aws'
-
 gem 'mini_magick'
 
+
+# 권한 주기
+gem 'cancancan'
+gem 'rolify'
+
+
+# 로그인
 gem 'devise'
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record

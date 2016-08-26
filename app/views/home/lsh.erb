@@ -1,25 +1,29 @@
-<head>
+<link rel="stylesheet" href="/assets/sh.css"/>
 
-    <link rel="stylesheet" href="/stylesheets/sh.css"/>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-
-</head>
-
-
-
-<div class='row'>
-    <div class='col-md-4 col-md-offset-5'><a href='/home/lsh'><img src='/assets/lsh/logo.PNG' style='img-responsive;'></a></div>
-</div>
-<header class='header-bar'>
-    <div class='navbar_sh'>
-        <ul class='ul_sh'>
-            <li class='li_sh'><a href='#'><b>home</b></a></li>
-            <li class='li_sh'><a href='#'><b>About Us</b></a></li>
-            <li class='li_sh'><a href='/home/product'><b>Condoms</b></a></li>
-            <li class='li_sh'><a href='/home/js_magazine'><b>Magazine</b></a></li>
-            <li class='li_sh'><a href='#'><b>Board</b></a></li>
-            <li class='li_sh'><a href='#'><b>Event</b></a></li>
+<nav>
+  <div class="container">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li> <a href="#">Categories </a>
+        <ul>
+          <li><a href="#">Category One</a></li>
+          <li><a href="#">Category Two</a></li>
+          <li><a href="#">Category Three</a></li>
         </ul>
-    </div>
-</header>
+      </li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+    $('nav li').hover(
+  function() {
+    $('ul', this).stop().slideDown(200);
+  },
+  function() {
+    $('ul', this).stop().slideUp(200);
+  }
+);
+
+</script>

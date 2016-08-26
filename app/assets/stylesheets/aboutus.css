@@ -1,0 +1,98 @@
+
+#about-us {
+    font-family: 'Lato', sans-serif;
+}
+
+.small_block {
+    padding: 40px 0;
+}
+
+.description {
+    text-align: center;
+    border-bottom: 1px solid #EEE;
+}
+
+#about-us hr {
+    max-width: 100px;
+    border-color: #222222;
+    border-width: 3px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.description p {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.whatwedo {
+    background:#222;
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.whatwedo>div>div.services_title {
+    padding: 150px 50px;
+    color: #FFF;
+}
+
+.test {
+    display: block;
+    padding: 100px 20px;
+    color: #FFF;
+}
+
+.services>div {
+    padding: 0;
+}
+
+.services.style_2 {
+    background: #111;
+    top: center fixed;
+}
+
+.services>div {
+    padding: 0;
+}
+
+.service_img{
+    vertical-align: center;
+    padding:0;
+}
+
+h4 {
+    font-size:25px;
+}
+
+p {
+    font-size:16px;
+}
+
+
+
+.whywedo {
+    background:#424242;
+}
+.whywedo>div>div.services_title {
+    padding: 150px 50px;
+    color: #FFF;
+}
+
+
+.whoweare>div>div.services_title {
+    padding: 150px 50px;
+    color: #FFF;
+}
+
+.whoweare {
+    background:#222;
+}
+
+.test2 {
+    display: block;
+    padding: 100px 20px;
+    color: #FFF;
+}

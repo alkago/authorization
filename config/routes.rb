@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
   
   
-  root 'home#index'
+  root 'home#main'
+  
+  get '/home/index' => 'home#index'
+  
   #마법의 route
   get ':controller(/:action(/:id))'
   post ':controller(/:action(/:id))'
-  
-  get ':controller(/:action(/:id))'
-  post ':controller(/:action(/:id))'
+
   devise_for :users
 
   get '/home/navbar'
@@ -33,15 +34,28 @@ Rails.application.routes.draw do
   get '/notice_destroy/:notice_id' => 'home#jf_notice_destroy'
   post '/notice_input_sent' => 'home#jf_notice_input_sent'
   
+  #이벤트
+  get '/event' => 'hocme#jf_event'
+  
   #주성 
   get 'home/js_magazine'
   get 'home/js_magazine_v'
   get 'home/js_magazine_p'
+  get 'home/js_tester'
+  
   
   #지혜
-  get 'home/jh_qna'
+  get '/qna' => 'system#qna'
+  get '/myorder' => 'system#myorder'
+  get '/mypage' => 'system#mypage'
+  
+  #get '/url' => 'controller#def'
+
   
   #상효
+  get 'home/modal'
+  
+  
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,23 +1,32 @@
+.branding {
+    padding:0;
+}
+
+.logo {
+    padding:0 !important;
+}
+
+
+
+
 .header-bar{
     position:relative;
-    
 }
+
 
 .header-bar .navbar_sh{
     background-color: white;
-    border-top: 1px solid #efefef;
-    border-bottom: 1px solid #efefef;
     text-align: center;
     font-size: 0;
 }
 
-.header-bar .navbar_sh .ul_sh {
+.header-bar .navbar_sh .leftnav .ul_sh {
     display:inline-block;
     list-style: none;
     margin: 0;
-    padding: 0px;
-    height:68px;
+    padding:0px;
     overflow: hidden;
+    height:38px !important;
 }
 
 .header-bar .navbar_sh .ul_sh .li_sh {
@@ -25,18 +34,22 @@
     font-family: AppleSDGothicNeo-SemiBold, '나눔고딕', NanumGothic, '맑은 고딕', 'Malgun Gothic', '돋움', Dotum, '굴림', Gulim, Helvetica, sans-serif;
     font-weight: 500;
     background-color: #fff;
-    padding: 22px 40px;
+    padding: 0px 40px;
     font-size: 17px;
-    color: black;
+    color: #54CCA2;
 }
 
 a.sh{
-    color:black;
+  font-family: SourceSansPro;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -1.2px;
+  color: #00bfd1 !important;
     
 }
 
 a.sh:hover{
-    color:gray;
+    color:#B6DD8E !important;
     text-decoration:none;
     /*font-size:150%;*/
 }
@@ -47,13 +60,12 @@ a.sh:hover{
 
 .wrapper>footer{
     max-width:100%;
-    background: #222;
+    height:260px;
+    background:#00bfd1;
     color: #DDD;
 }
 
-.smblock{
-    padding:40px 0;
-}
+
 
 
 .text-vertical-box {
@@ -87,26 +99,162 @@ footer #footer-logo {
     padding: 0 10px;
 }
 
+.dropdown, .dropup {
 
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1000;
-    display: none;
-    float: left;
-    min-width: 160px;
-    padding: 5px 0;
-    margin: 2px 0 0;
-    font-size: 14px;
-    text-align: left;
-    list-style: none;
-    background-color: #fff;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
-    border: 1px solid #ccc;
-    border: 1px solid rgba(0,0,0,0.15);
-    border-radius: 4px;
-    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+    position:static !important;
 }
+.dropdown {
+
+    display: inline-block;
+    position: relative;
+ 
+}
+
+.dropdown-content {
+    z-index:1000;
+    display: none;
+    position: absolute;
+    background-color: #fdfdfd;
+    min-width: 150px;
+    box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.2);
+    text-decoration: none;    
+}
+
+.dropdown-content a {
+    text-decoration: none;
+    color: #00bfd1 !important;
+    padding: 12px 16px;
+    display: block;
+    font-weight:bold;
+}
+.dropdown-content a:hover {
+    color:#B6DD8E !important;
+    
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropdownsh {
+    color: #3D9979;
+}
+
+.smblock{
+    padding-top:10px;
+}
+
+
+
+
+
+.foot_title {
+    font-family: SourceSansPro;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.33;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+.foot_text {
+    font-size:13px !important;
+    opacity: 0.9 !important;
+    line-height: 1.5;
+    text-align:left;
+}
+
+.foot_contact {
+    width:36.33%;
+    float:left;
+    margin-right:8.7rem;
+}
+
+.foot_follow {
+    width:25.33%;
+    float:left;
+}
+
+.foot_aboutus {
+    width:25%;
+    float:left;
+}
+
+.foot_list{
+    width:100%;
+}
+
+.foot_list2{
+    display:inline-block;
+    font-family: SourceSansPro;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.33;
+    letter-spacing: 1px;
+    color: #ffffff;
+    padding-left:40px;
+}
+.foot_list3{
+    display:inline-block;
+    font-family: SourceSansPro;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.33;
+    letter-spacing: 1px;
+    color: #ffffff;
+    padding-left:120px;
+    opacity:0.7 !important;
+}
+
+.foot_hr{
+    width:95%;
+    margin-left:-0.5%;
+}
+
+.foot_img{
+    margin-top:10px;
+    padding-right:20px;
+}
+
+
+
+/*지혜가 추가하는 CSS*/
+
+.search-field {
+	width: 178px;
+	height: 36px;
+	border-radius: 50px;
+	border: solid 1px #5eceaf;
+}
+
+.search-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /*margin: 9px;*/
+    margin-right: 20px;
+    margin-top: 18px;
+    margin-left: 143px;
+	width: 21.1px;
+	height: 21.1px;
+    background: 
+    url(https://img.reebonzkorea.co.kr/assets/1410_renew/ic_search-6febb8b27ced6034aff3ebb63f2f66b5.png) no-repeat 0 0;
+    cursor: pointer;    
+}
+
+
+
+
+
+.btn-search {
+	width: 21.1px;
+	height: 21.1px;
+	background-color: #5eceaf;
+}
+
+
+
+
+
+
+
