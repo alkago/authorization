@@ -66,15 +66,14 @@
         <span class="title-text comment">댓글달기</span>        
         <form action="/notice_comment" method="post">
             <input name="notice_id_comment" value="<%= @existing_notice.id %>" type="hidden">
-            <textarea name="jf_notice_comment" class="form-control content-well sm" 
-                      id="jf_notice_comment" rows="2" placeholder="댓글을 입력해 주세요." >
-            </textarea>
+            <textarea name="jf_notice_comment" class="form-control content-well sm" id="jf_notice_comment" rows="2" placeholder="댓글을 입력해 주세요." ></textarea>
             
           
             <button type="submit" class="btn btn-sm btn-submit" style="float: right;" >댓글 쓰기</button>
         </form>
 
-        <a href="/home/jf_notice">목록</a>
+        </br></br>    
+        <div><a href="/home/jf_notice">목록보기</a></div>
         
     </br></br>
     

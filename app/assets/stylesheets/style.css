@@ -239,7 +239,8 @@ footer #footer-logo {
 	height: 21.1px;
     background: 
     url(https://img.reebonzkorea.co.kr/assets/1410_renew/ic_search-6febb8b27ced6034aff3ebb63f2f66b5.png) no-repeat 0 0;
-    cursor: pointer;    
+    cursor: pointer;   
+    background-color: #ffff;
 }
 
 

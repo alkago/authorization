@@ -26,11 +26,10 @@
   
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
+  <script src="//code.jquery.com/jquery.min.js"></script>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="//code.jquery.com/jquery.min.js"></script>
 
 
 <!--<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">    -->
@@ -42,6 +41,7 @@
 
  <div class="container" style='width:100%;'>
     <ul class="nav navbar-nav navbar-right" style="float: right;">
+        
         <%if user_signed_in? %>
         </br>
         
@@ -50,10 +50,9 @@
              <form class="navbar-form navbar-left">
                 <div class="form-group">
                   <input type="text" class="search-field" placeholder="    바나나 탐색하기">
+                  <div class="btn search-box"> </div>                  
                 </div>
-                    <button type="button" class="btn-search">          
-                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                    </button>                 
+   
               </form>            
             </li>   
             
@@ -67,19 +66,18 @@
             <li>
             <!--Search Box-->
              <form class="navbar-form navbar-left">
-                <div class="form-group">
+                <div class="form-group input-group custom-search-form">
                   <input type="text" class="search-field" placeholder="    당신의 바나나는?">
-                  <div class="search-box"> </div>
-                    <!--<button type="button" class="btn btn-search">          -->
-                    <!--    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>-->
-                    <!--</button>                    -->
+                    <!--<span class="glyphicon glyphicon-search" aria-hidden="true"></span>  -->
+                    <span class="input-group-btn"></span>
+
                 </div>
               </form>             
             </li>        
 
             <li><a href="/" style='color:#5eceaf;'>Home</a></li>
             <li><a href="/users/sign_in" style='color:#5eceaf;'>Log in</a></li>				                                                                  
-            <li><a href="/users/sign_up" style='color:#5eceaf;'>Sign up</a></li>
+            <li><a href="/users/sign_up" style='color:#5eceaf;'ㅇ>Sign up</a></li>
         <%end%>
     </ul>
   </div>

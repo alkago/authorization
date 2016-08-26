@@ -7,10 +7,10 @@
 
 .affix{
   margin-left:-3rem;
-  top:34rem;
+  top:32rem;
+  position:absolute;
 
 }
-
 
 .sidefilterbar{
     width:24rem;
@@ -55,12 +55,13 @@
 }
 
 .filter_content{
-  width:110px;
+  cursor:pointer;
+  width:80px;
   height:50px;
   display:inline-block;
-  padding: 10px 10px;
+  padding: 2px 3px;
   font-family: NanumSquareOTFR;
-  font-size: 17px;
+  font-size: 14px;
   color: #000000;
   text-align: center;
 }
@@ -68,12 +69,12 @@
 .filter_title{
   width:80px;
   height:50px;
-  padding-top:10px;
-  padding-bottom:10px;
+  padding-top:2px;
+  padding-bottom:2px;
   padding-right:20px;
   display:inline-block;
   font-family: NanumSquareOTFB;
-  font-size: 19px;
+  font-size: 16px;
   color: #000000;
   font-weight:bold;
   text-align: left;
@@ -252,3 +253,9 @@
   margin-bottom:4rem;
 }
 /*product CSS*/
+
+
+/*MODAL CSS*/
+.modal-header{
+  border-bottom:none !important;
+}
